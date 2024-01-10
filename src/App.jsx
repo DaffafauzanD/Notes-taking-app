@@ -1,31 +1,32 @@
-import { useState } from 'react'
-import Editor from "./Editor";
-import './App.css'
+
+import Card from "./component/Card"
+import ContentModal from "./component/ContentModal"
+import EditModal from "./component/EditModal"
+import SideBar from "./component/SideBar"
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+
 
   return (
     <>
-      <div className="App">
-      <h1>Plain Text Example</h1>
-      <p>Note: this is an experimental build of Lexical</p>
-      <Editor />
-      <div className="other">
-        <h2>Other Examples</h2>
-        <ul>
-          <li>
-            <a
-              href="https://codesandbox.io/s/lexical-rich-text-example-5tncvy"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Rich text example
-            </a>
+      <div className="container-fluid">
+        <div className="row flex-nowrap">
+          <SideBar/>
+          <ContentModal />
+          <EditModal />
+
+        </div>
+      </div>
+      <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+        <a href="" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <span className="fs-4">Note Taking</span>
+        </a>
+        <ul className="nav nav-pills flex-column mb-auto">
+          <li className="nav-item">
           </li>
         </ul>
       </div>
-    </div>
     </>
   )
 }
