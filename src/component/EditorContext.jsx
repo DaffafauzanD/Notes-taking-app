@@ -30,7 +30,7 @@ function EditorContextProvider(props) {
                     config: {
                         default: "left",
                         blocks: {
-                            header: 'center',
+                            header: 'left',
                         }
                     }
                 },
