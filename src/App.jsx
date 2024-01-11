@@ -9,12 +9,7 @@ function App() {
     <>
     <SideBar />
       <div className="collapse" id="cardShow">
-       
       </div>
-
-
-
-      
     </>
   )
 }

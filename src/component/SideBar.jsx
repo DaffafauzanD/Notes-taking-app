@@ -16,7 +16,8 @@ function SideBar() {
                         </div>
                     </div>
                     <div className="col ps-md-2 pt-2">
-                        <a href="#" data-bs-target="#sidebar" data-bs-toggle="collapse" className="border rounded-3 p-1 text-decoration-none"><i className="bi bi-list bi-lg py-2 p-1"></i> Menu</a>
+                        <a href="#" data-bs-target="#sidebar" data-bs-toggle="collapse" className="border rounded-3 p-1 text-decoration-none">
+                            <i className="bi bi-list bi-lg py-2 p-1"></i> Menu</a>
                         <ShowNote />
                         <EditModal />
                     </div>

@@ -18,11 +18,11 @@ function ShowNote() {
 
             <div className="collapse" id="note">
                 <div>
-                    <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="editorjs"></div>
+                    <div className="shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="editorjs"></div>
                 </div>
                 <div>
-                    <button className="btn btn-primary">save</button>
-                    <button className="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#note">Close</button>
+                    <a type="button" className="border rounded-3 p-2 text-decoration-none">Save</a>
+                    <a type="button" className="border rounded-3 p-2 text-decoration-none" data-bs-toggle="collapse" data-bs-target="#note">Close</a>
                 </div>
             </div>
         </>
