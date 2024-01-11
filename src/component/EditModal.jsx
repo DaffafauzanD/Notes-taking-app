@@ -1,15 +1,22 @@
-function EditModal({title,body,idx}) {
+
+
+function EditModal({ title, body, idx }) {
+
     return (
         <>
-            <div className={"collapse" + idx} id={"edit" + idx}>
+            <div className="collapse" id={"edit" + idx}>
                 edit area...
-                <h1>{title}</h1>
-                <p>{body}</p>
-                <div>
+                <h4>{title}</h4>
+                <div className="d-inline-block text-truncate" >
+                    <p>{body}</p>
+                </div>
+                
+                <div className="mb-4">
                     <button className="btn btn-primary">save</button>
-                    <button className="btn btn-primary" data-bs-toggle={"collapse" +idx} data-bs-target={"#edit"+idx}>Close</button>
+                    <button className="btn btn-primary" data-bs-toggle={"collapse" + idx} data-bs-target={"#edit" + idx}>Close</button>
                 </div>
             </div>
+            
         </>
     );
 }
