@@ -1,4 +1,3 @@
-import EditModal from "./EditModal";
 function Card({ title, body, idx }) {
     return (
         <>
