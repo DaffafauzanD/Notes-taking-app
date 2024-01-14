@@ -103,11 +103,6 @@ function EditorContextProvider(props) {
                 },
 
             },
-            onChange: async () => {
-                console.log(editor);
-                const data = await editor.save()
-                console.log(data)
-            }
         })
         editorInstanceRef.current = editor
     }
