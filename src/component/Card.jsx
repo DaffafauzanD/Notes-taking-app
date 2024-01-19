@@ -1,4 +1,4 @@
-function Card({ title, body, idx }) {
+function Card({ blocks, idx }) {
     return (
         <>
             <div className="col-md-4 pb-4">
@@ -10,7 +10,11 @@ function Card({ title, body, idx }) {
                         </button>
                     </div>
                     <div className="card-block mx-2 mt-2">
-                        <h4 className="card-title">{title}</h4>
+                        {blocks.map(block =>{
+                            return(
+                                <h4 className="card-title">{block.data.text}</h4>
+                            )
+                        })}
                         <h6 className="card-subtitle text-muted">Support card subtitle</h6> 
                     </div>
                     <a type="button" className="stretched-link" data-bs-toggle="collapse" data-bs-target={"#edit" +idx}></a>

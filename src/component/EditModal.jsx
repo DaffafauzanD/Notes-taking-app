@@ -29,25 +29,7 @@ function EditModal() {
   ]
   return (
     <>
-      <div className="collapse" id="CardShow">
-        <div className="col ps-md-2 pt-2">
-          <div className="py-5">
-            <div className="row hidden-md-up">
-              {dummyNotes.map(note => {
-                return <Card title={note.title} body={note.body} idx={note.id} key={note.id} />
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* <div className="collapse" id="note">
-
-                <div>
-                    <button className="btn btn-primary">save</button>
-                    <button className="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#note">Close</button>
-                </div>
-            </div> */}
-
+      
     </>
   );
 }

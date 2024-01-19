@@ -1,20 +1,20 @@
-import EditModal from "./EditModal";
+import Card from "./Card"
 import ShowNote from "./ShowNote";
 import { useContext, useEffect, useState } from "react";
 import { EditorContext } from "./EditorContext";
 
 function SideBar() {
     const localNotes = JSON.parse(localStorage.getItem('notes'))
-    const [notesArr, setNoteArr] = useState(localNotes ? localNotes :  [])
-    const {editorInstanceRef} = useContext(EditorContext)
-    const handleSave = async() => {
+    const [notesArr, setNoteArr] = useState(localNotes ? localNotes : [])
+    const { editorInstanceRef } = useContext(EditorContext)
+    const handleSave = async () => {
         const data = await editorInstanceRef.current.save()
         console.log(data)
         setNoteArr(prev => [data, ...prev])
     }
-    useEffect(()=>{
+    useEffect(() => {
         localStorage.setItem('notes', JSON.stringify(notesArr))
-    },[notesArr])
+    }, [notesArr])
     return (
         <>
             <div className="container-fluid">
@@ -31,8 +31,18 @@ function SideBar() {
                     <div className="col ps-md-2 pt-2">
                         <a href="#" data-bs-target="#sidebar" data-bs-toggle="collapse" className="border rounded-3 p-1 text-decoration-none">
                             <i className="bi bi-list bi-lg py-2 p-1"></i> Menu</a>
-                        <ShowNote onSave={handleSave}/>
-                        <EditModal />
+                        <ShowNote onSave={handleSave} />
+                        <div className="collapse" id="CardShow">
+                            <div className="col ps-md-2 pt-2">
+                                <div className="py-5">
+                                    <div className="row hidden-md-up">
+                                        {notesArr.map((note, idx) => {
+                                            return <Card blocks={note.blocks} idx={idx} key={idx} />
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
